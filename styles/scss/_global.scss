@@ -1,0 +1,41 @@
+:root {
+  /* Primary */
+  --background: rgb(59, 103, 125);
+
+  /* Neutral */
+  --titles: hsl(229, 23%, 23%);
+  --text: hsl(227, 10%, 46%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  background-image: url('../../images/bg-pattern-top.svg'), url('../../images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+}
+
+picture {
+  display: flex;
+}
+
+h1,
+h2 {
+  font-size: 18px;
+  color: var(--titles);
+}
+
+.main-content {
+  display: grid;
+  place-items: center;
+  padding: 0 25px;
+  height: 100vh;
+}
+
+@import 'media';

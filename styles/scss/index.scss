@@ -1,0 +1,55 @@
+@import 'global';
+
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
+
+  &__top-background {
+    width: 100%;
+    user-select: none;
+  }
+
+  &__body {
+    background-color: #fdf4e0;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__user picture {
+    position: relative;
+    top: -48px;
+    outline: 5px solid #fff;
+    border-radius: 9em;
+    overflow: hidden;
+  }
+
+  &__user-name {
+    margin: -24px 0 10px;
+  }
+
+  &__user-age {
+    margin-left: 4px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  &__user-city {
+    font-size: 15px;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 52px 28px;
+    text-align: center;
+  }
+
+  &__stats p {
+    font-size: 12px
+  }
+}
