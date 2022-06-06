@@ -1,10 +1,12 @@
 :root {
-  /* Primary */
+  // Main
   --background: rgb(59, 103, 125);
-
-  /* Neutral */
   --titles: hsl(229, 23%, 23%);
   --text: hsl(227, 10%, 46%);
+
+  // Card
+  --card-body: hsl(40, 87%, 91%);
+  --card-picture: hsl(33, 61%, 88%);
 }
 
 * {
