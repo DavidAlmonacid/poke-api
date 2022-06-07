@@ -26,24 +26,28 @@ const fetchData = async (id) => {
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await res.json();
-    drawCard(data, id);
+    console.log(data); // Remove
+
+    const pokemon = {
+      img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
+      name: formatName(data.name, data.id),
+    };
+
+    drawCard(pokemon);
   } catch (error) {
     console.log(error);
   }
 };
 
-const drawCard = (pokemon, pokemonNumber) => {
-  console.log(pokemon); // Remove
-
+const drawCard = (object) => {
   const main = document.querySelector('.main-content');
   const template = document.getElementById('template-card').content;
   const templateClone = template.cloneNode(true);
   const fragment = document.createDocumentFragment();
-  const pokemonName = formatName(pokemon.name, pokemonNumber);
 
   const image = templateClone.querySelector('.card__pokemon-picture');
-  image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonNumber}.png`;
-  image.alt = pokemonName;
+  image.src = object.img;
+  image.alt = object.name;
 
   fragment.appendChild(templateClone);
   main.appendChild(fragment);
@@ -51,6 +55,5 @@ const drawCard = (pokemon, pokemonNumber) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const randomPokemon = getRandomNumber(386, 495);
-  console.log(randomPokemon); // Remove
   fetchData(randomPokemon);
 });
