@@ -31,6 +31,7 @@ const fetchData = async (id) => {
     const pokemon = {
       img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
       name: formatName(data.name, data.id),
+      HP: data.stats[0].base_stat,
     };
 
     drawCard(pokemon);
@@ -48,6 +49,12 @@ const drawCard = (object) => {
   const image = templateClone.querySelector('.card__pokemon-picture');
   image.src = object.img;
   image.alt = object.name;
+
+  const name = templateClone.querySelector('.card__pokemon-name');
+  name.textContent = object.name;
+
+  const hitPoints = templateClone.querySelector('.card__pokemon-hp');
+  hitPoints.textContent = `HP ${object.HP}`;
 
   fragment.appendChild(templateClone);
   main.appendChild(fragment);

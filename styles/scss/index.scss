@@ -18,31 +18,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
 
-  &__pokemon picture {
-    margin-top: -88px;
-    border-radius: 9em;
-    padding: 16px;
-    width: 212px;
-    height: 212px;
-    background-color: var(--card-picture);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.28);
-    overflow: hidden;
-  }
+    & picture {
+      margin-top: -88px;
+      border-radius: 9em;
+      padding: 16px;
+      width: 212px;
+      height: 212px;
+      background-color: var(--card-picture);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+    }
 
-  &__pokemon-name {
-    margin: 20px 0 10px;
-  }
+    &-title {
+      display: grid;
+      place-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
 
-  &__pokemon-age {
-    margin-left: 4px;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  &__pokemon-city {
-    font-size: 15px;
+    &-hp {
+      font-weight: 500;
+      font-size: 15px;
+    }
   }
 
   &__stats {
