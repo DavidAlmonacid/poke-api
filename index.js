@@ -26,12 +26,15 @@ const fetchData = async (id) => {
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await res.json();
-    console.log(data); // Remove
 
     const pokemon = {
       img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
       name: formatName(data.name, data.id),
-      HP: data.stats[0].base_stat,
+      hp: data.stats[0].base_stat,
+      attack: data.stats[1].base_stat,
+      defense: data.stats[2].base_stat,
+      spAttack: data.stats[3].base_stat,
+      spDefense: data.stats[4].base_stat,
       types: data.types,
     };
 
@@ -55,7 +58,7 @@ const drawCard = (object) => {
   name.textContent = object.name;
 
   const hitPoints = templateClone.querySelector('.card__pokemon-hp');
-  hitPoints.textContent = `HP ${object.HP}`;
+  hitPoints.textContent = `HP ${object.hp}`;
 
   const types = templateClone.querySelector('.card__pokemon-types');
   object.types.forEach((el) => {
@@ -66,6 +69,18 @@ const drawCard = (object) => {
 
     types.appendChild(span);
   });
+
+  const attack = templateClone.querySelector('.card__pokemon-attack');
+  attack.textContent = object.attack;
+
+  const spAttack = templateClone.querySelector('.card__pokemon-sp-attack');
+  spAttack.textContent = object.spAttack;
+
+  const defense = templateClone.querySelector('.card__pokemon-defense');
+  defense.textContent = object.defense;
+
+  const spDefense = templateClone.querySelector('.card__pokemon-sp-defense');
+  spDefense.textContent = object.spDefense;
 
   fragment.appendChild(templateClone);
   main.appendChild(fragment);
