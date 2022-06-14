@@ -32,6 +32,7 @@ const fetchData = async (id) => {
       img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
       name: formatName(data.name, data.id),
       HP: data.stats[0].base_stat,
+      types: data.types,
     };
 
     drawCard(pokemon);
@@ -55,6 +56,16 @@ const drawCard = (object) => {
 
   const hitPoints = templateClone.querySelector('.card__pokemon-hp');
   hitPoints.textContent = `HP ${object.HP}`;
+
+  const types = templateClone.querySelector('.card__pokemon-types');
+  object.types.forEach((el) => {
+    const type = el.type.name;
+    const span = document.createElement('span');
+    span.textContent = type;
+    span.style.backgroundColor = `var(--${type})`;
+
+    types.appendChild(span);
+  });
 
   fragment.appendChild(templateClone);
   main.appendChild(fragment);

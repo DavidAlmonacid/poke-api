@@ -5,8 +5,29 @@
   --text: hsl(227, 10%, 46%);
 
   // Card
-  --card-body: hsl(40, 87%, 91%);
-  --card-picture: hsl(33, 61%, 88%);
+  --body: hsl(40, 87%, 91%);
+  --picture: hsl(33, 61%, 88%);
+  --border-type: hsl(0, 0%, 64%);
+
+  // Types
+  --bug: hsl(72, 48%, 44%);
+  --dark: hsl(0, 0%, 36%);
+  --dragon: hsl(262, 92%, 56%);
+  --electric: hsl(52, 88%, 44%);
+  --fairy: hsl(318, 92%, 72%);
+  --fighting: hsl(8, 60%, 40%);
+  --fire: hsl(24, 98%, 52%);
+  --flying: hsl(184, 48%, 56%);
+  --ghost: hsl(262, 24%, 52%);
+  --grass: hsl(92, 52%, 40%);
+  --ground: hsl(44, 40%, 36%);
+  --ice: hsl(196, 76%, 52%);
+  --normal: hsl(197, 4%, 64%);
+  --poison: hsl(262, 96%, 56%);
+  --psychic: hsl(325, 96%, 60%);
+  --rock: hsl(48, 52%, 44%);
+  --steel: hsl(180, 15%, 60%);
+  --water: hsl(204, 52%, 48%);
 }
 
 * {

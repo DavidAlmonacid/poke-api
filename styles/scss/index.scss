@@ -11,35 +11,46 @@
   }
 
   &__body {
-    background-color: var(--card-body);
+    background-color: var(--body);
   }
 
   &__pokemon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 
     & picture {
-      margin-top: -88px;
+      margin-top: -106px;
       border-radius: 9em;
       padding: 16px;
       width: 212px;
       height: 212px;
-      background-color: var(--card-picture);
+      background-color: var(--picture);
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.28);
       overflow: hidden;
-    }
-
-    &-title {
-      display: grid;
-      place-items: center;
-      gap: 8px;
-      margin-top: 16px;
     }
 
     &-hp {
       font-weight: 500;
       font-size: 15px;
+    }
+
+    &-types {
+      display: flex;
+      gap: 8px;
+      font: 500 14px/1 flexo;
+      color: #fff;
+
+      & span {
+        border: 1px solid var(--border-type);
+        border-radius: 4px;
+        padding: 4px;
+        width: 64px;
+        text-align: center;
+        text-transform: capitalize;
+        text-shadow: 0 0 2px #000;
+      }
     }
   }
 
