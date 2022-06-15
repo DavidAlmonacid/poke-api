@@ -9,7 +9,7 @@ This card was build following the [Profile card component challenge on Frontend 
 ![](https://i.imgur.com/2KHIuyI.png)
 
 <div align="center">
-  <a href="https://eclectic-lily-48127e.netlify.app"><img src="https://img.shields.io/badge/visit the site-621F55?style=for-the-badge" /></a>
+  <a href="https://lnkd.in/g_kAziTX"><img src="https://img.shields.io/badge/visit the site-621F55?style=for-the-badge" /></a>
 </div>
 
 #
